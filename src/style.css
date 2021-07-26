@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 *{
-  background: hsl(233,47%,7%) ;
+  background: hsl(233,47%,7%);
+  box-sizing: border-box;
   color: white;
   font-size: 15px;
-  height: 1140px ;
+}
+
+body{
+height: 1200px;
+
 }
 
 .wrapper{
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .mainBox{
-  width: 80%;
+  width: 75%;
   height: 550px;
   border-radius: 10px;
   display: flex;
   background: hsl(244,38%,16%)
-}
-
-.textBox{
-  background: transparent;
-  flex: 1;
 }
 
 .imgBox{
@@ -40,12 +41,22 @@
 }
 
 .textBox{
-  padding: 4em 10em 14em;
+  background: transparent;
+  padding: 4em 6em 14em;
   display: flex;
   flex-direction: column;
+  flex:1;
   height: auto;
 }
+.breakLine{
+background: inherit;
 
+}
+
+.breakLine:before{
+  content:"\A";
+  white-space: pre;
+}
 .title{
   font-family: "Inter", sans-serif;
   font-size: 2.5em;
@@ -61,16 +72,22 @@
   background: transparent;
 }
 
-.content{
+.content {
   background: transparent;
+  font-size: 1.2em;
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0,0%,100%, 0.75);
   line-height: 1.6;
-  margin-bottom: 8em;
+  margin-bottom: 6em;
+}
+
+.breakLine, .firstBreak{
+font-size: inherit;
+color: inherit;
+background: inherit;
 }
 
 .footerCard{
-  
   background: transparent;
   display:flex;
   justify-content: space-between;
@@ -82,6 +99,7 @@
   flex-direction: column;
   width: 100px;
   height: 50px;
+  margin-bottom:3em;
   
 }
 
@@ -97,19 +115,13 @@
   background: inherit;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
-@media screen and (max-width:780px){
-  *{
-    }
-
-  .wrapper{
-
-  }
+  @media screen and (max-width:700px){
 
   .mainBox{
-  height: 950px;
+  height: 850px;
   width: 360px;
   flex-direction: column;
   }
@@ -120,29 +132,39 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1px;
+  
   }
 
   .title{
   font-size: 2em;
   text-align: center;
   margin-top: 1em;
-  margin-bottom: -3em;
+  margin-bottom: 1em;
   }
 
   .content{
     text-align: center;
-    margin-bottom: -4em;
-    
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+
+  .breakLine:before{
+  content:'';
+  }
+
+  .breakLine:after, .firstBreak:after {
+  content:'\A';
+  white-space: pre;
   }
 
   .footerCard{
   display: flex;
   flex-direction: column;
-  margin-bottom: 3em;
+  margin-top: 1em;
   }
 
   .footerData{
+  margin-bottom: 3em;
   text-align: center}
 
   .footerData p {
